@@ -86,3 +86,14 @@
   font-family: 'Satoshi';
 }
 
+@font-face {
+  font-family: 'LightSatoshi';
+  src: url('../app/fonts/Satoshi-LightItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.satoshi-light {
+  font-family: 'LightSatoshi';
+}
+

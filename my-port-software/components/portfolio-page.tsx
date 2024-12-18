@@ -50,10 +50,65 @@ export default function PortfolioPage() {
           <ContactForm />
         </div>
         <header className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-black satoshi-black">ADAM AXTOPANI GONZALES</h1>
+          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-black satoshi-black">ADAM AXTOPANI GONZALES</h1>
         </header>
 
-        <div className="rounded-t-[3rem] flex-grow p-6 relative overflow-hidden">
+        {/* New Bio Section with Inline Images */}
+        <div className="mb-12 max-w-7xl">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter text-black satoshi-black flex flex-col gap-4">
+            <span className="inline-flex items-center gap-8">
+              Mexican-American
+              {/* Place your image in the public folder and update the src path */}
+              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+                <Image
+                  src="/images/mexico-text.jpg" // Update this path to match your image file
+                  alt="Founder Image"
+                  width={240}
+                  height={120}
+                  className="object-cover h-full w-full shadow-lg"
+                />
+              </span>
+              founder,
+            </span>
+
+            <span className="inline-flex items-center gap-8">
+              Web&nbsp;Developer,  
+              {/* TODO: Replace with actual web developer image */}
+              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+                <Image
+                  src="/images/webdev-text.jpg"
+                  alt="Developer Image"
+                  width={120}
+                  height={60}
+                  className="object-cover h-full w-full shadow-lg"
+                />
+              </span>
+            </span>
+
+            <span>
+              [ specializing in creating responsive, user-focused websites ]
+            </span>
+
+            <span className="inline-flex items-center whitespace-nowrap gap-8">
+              and&nbsp;Data&nbsp;Analyst 
+              {/* TODO: Replace with actual data analysis image */}
+              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+                <Image
+                  src="/images/data-text.jpg"
+                  alt="Data Analysis Image"
+                  width={240}
+                  height={120}
+                  className="object-cover h-full w-full shadow-lg"
+                />
+              </span>
+            </span>
+
+            <span>
+              [ leveraging machine&nbsp;learning to drive data-driven insights and smarter&nbsp;decisions.]
+            </span>
+          </p>
+        </div>
+        <div className="rounded-t-[3rem] flex-grow p-6 relative overflow-hidden min-h-screen">
           <div className="absolute inset-0">
             <Image
               src="/images/main-bg-2.jpg"
@@ -67,11 +122,6 @@ export default function PortfolioPage() {
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto">
-            <p className="text-xl md:text-2xl fotn  text-white max-w-2xl satoshi-black mb-12">
-              A multidisciplinary creator specializing in Web Development, Graphic Design, 
-              and Data Science, crafting digital experiences that merge aesthetics with functionality.
-            </p>
-
             <Tabs defaultValue="all" className="mb-8">
               <TabsList className="backdrop-blur-md bg-white/10 border border-white/20">
                 <TabsTrigger value="all" onClick={() => setActiveTab("all")}>
@@ -111,6 +161,40 @@ export default function PortfolioPage() {
                   </motion.div>
                 </Link>
               ))}
+            </div>
+
+            {/* Added Additional Sections */}
+            <div className="mt-16 space-y-16">
+              {/* About Section */}
+              <section className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8">
+                <h2 className="text-3xl font-bold text-white mb-6">About My Process</h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-gray-200">
+                    <h3 className="text-xl font-semibold mb-4">Research & Planning</h3>
+                    <p>Understanding client needs and creating detailed project roadmaps for success.</p>
+                  </div>
+                  <div className="text-gray-200">
+                    <h3 className="text-xl font-semibold mb-4">Development</h3>
+                    <p>Building scalable solutions using cutting-edge technologies and best practices.</p>
+                  </div>
+                  <div className="text-gray-200">
+                    <h3 className="text-xl font-semibold mb-4">Testing & Deployment</h3>
+                    <p>Rigorous testing and smooth deployment processes for reliable products.</p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Skills Section */}
+              <section className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8">
+                <h2 className="text-3xl font-bold text-white mb-6">Technical Skills</h2>
+                <div className="grid md:grid-cols-4 gap-4">
+                  {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'SQL', 'AWS', 'Docker'].map((skill) => (
+                    <div key={skill} className="bg-white/10 rounded-xl p-4 text-white text-center hover:bg-white/20 transition-colors">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </div>
