@@ -6,6 +6,7 @@ import { Globe, Palette, Database, ExternalLink } from 'lucide-react'
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 import Image from 'next/image'
+import { ContactForm } from './ContactForm'
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState("all")
@@ -42,31 +43,26 @@ export default function PortfolioPage() {
     : projects.filter(project => project.category === activeTab)
 
   return (
-    <div className="relative min-h-screen"> {/* Removed bg-[#f5f5f5] */}
+    <div className="relative min-h-screen">
       <div className="relative z-10 min-h-screen p-8 md:p-12 flex flex-col">
         <div className="flex justify-between items-center mb-8">
           <span className="text-sm text-black">©2024</span>
-          <a href="#contact" className="text-sm text-black hover:text-gray-600 transition-colors">
-            CONTACT
-          </a>
+          <ContactForm />
         </div>
         <header className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-black satoshi-black">ADAM AXTOPANI GONZALES</h1>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-black satoshi-black">ADAM AXTOPANI GONZALES</h1>
         </header>
 
-        {/* Content container with background image */}
         <div className="rounded-t-[3rem] flex-grow p-6 relative overflow-hidden">
-          {/* Background Image - Now inside the content container */}
           <div className="absolute inset-0">
             <Image
-              src="/images/sand-bg.jpg"
+              src="/images/main-bg-2.jpg"
               alt="Background"
               fill
               className="object-cover object-center"
               priority
               quality={100}
             />
-            {/* Overlay with inner shadow */}
             <div className="absolute inset-0 bg-black/30 shadow-[inset_0_0_50px_rgba(0,0,0,1)]" />
           </div>
 
@@ -122,3 +118,4 @@ export default function PortfolioPage() {
     </div>
   )
 }
+
