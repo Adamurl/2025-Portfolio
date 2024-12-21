@@ -50,64 +50,49 @@ export default function PortfolioPage() {
           <ContactForm />
         </div>
         <header className="mb-8">
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-black satoshi-black">ADAM AXTOPANI GONZALES</h1>
+          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-black satoshi-black break-words">ADAM AXTOPANI GONZALES</h1>
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2 tracking-wide satoshi-regular">
+            [ a-ksht-oh-pan-ee ]
+          </p>
         </header>
 
-        {/* New Bio Section with Inline Images */}
-        <div className="mb-12 max-w-7xl">
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter text-black satoshi-black flex flex-col gap-4">
-            <span className="inline-flex items-center gap-8">
-              Mexican-American
-              {/* Place your image in the public folder and update the src path */}
-              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-                <Image
-                  src="/images/mexico-text.jpg" // Update this path to match your image file
-                  alt="Founder Image"
-                  width={240}
-                  height={120}
-                  className="object-cover h-full w-full shadow-lg"
-                />
-              </span>
-              founder,
-            </span>
-
-            <span className="inline-flex items-center gap-8">
-              Web&nbsp;Developer,  
-              {/* TODO: Replace with actual web developer image */}
-              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-                <Image
-                  src="/images/webdev-text.jpg"
-                  alt="Developer Image"
-                  width={120}
-                  height={60}
-                  className="object-cover h-full w-full shadow-lg"
-                />
-              </span>
-            </span>
-
-            <span>
-              [ specializing in creating responsive, user-focused websites ]
-            </span>
-
-            <span className="inline-flex items-center whitespace-nowrap gap-8">
-              and&nbsp;Data&nbsp;Analyst 
-              {/* TODO: Replace with actual data analysis image */}
-              <span className="inline-block h-[1.2em] w-[2.4em] overflow-hidden rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-                <Image
-                  src="/images/data-text.jpg"
-                  alt="Data Analysis Image"
-                  width={240}
-                  height={120}
-                  className="object-cover h-full w-full shadow-lg"
-                />
-              </span>
-            </span>
-
-            <span>
-              [ leveraging machine&nbsp;learning to drive data-driven insights and smarter&nbsp;decisions.]
-            </span>
+        {/* Bio Section */}
+        <div className="mb-12">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter text-black satoshi-black">
+            Mexican-American founder, Web Developer [ specializing in creating responsive, user-focused websites ] and Data Analyst [ specializing in creating responsive, user-focused websites ]
           </p>
         </div>
+
+        {/* Split Image Section */}
+        <div className="grid grid-cols-2 gap-0 mb-12 h-screen -mx-8 md:-mx-12">
+          <div className="relative overflow-hidden">
+            <Image
+              src="/images/design.jpg"
+              alt="Design Background"
+              fill
+              className="object-cover"
+              priority
+              quality={100}
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h2 className="text-7xl md:text-9xl font-black tracking-tighter text-white satoshi-black">DESIGN</h2>
+            </div>
+          </div>
+          <div className="relative overflow-hidden">
+            <Image
+              src="/images/data.jpg"
+              alt="Data Background"
+              fill
+              className="object-cover"
+              priority
+              quality={100}
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h2 className="text-7xl md:text-9xl font-black tracking-tighter text-white satoshi-black">DATA</h2>
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-t-[3rem] flex-grow p-6 relative overflow-hidden min-h-screen">
           <div className="absolute inset-0">
             <Image
@@ -202,4 +187,3 @@ export default function PortfolioPage() {
     </div>
   )
 }
-
