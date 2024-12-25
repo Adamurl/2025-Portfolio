@@ -6,7 +6,6 @@ import { Globe, Palette, Database, ExternalLink } from 'lucide-react'
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 import Image from 'next/image'
-import { ContactForm } from './ContactForm'
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState("all")
