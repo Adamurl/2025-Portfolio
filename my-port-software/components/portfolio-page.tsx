@@ -46,7 +46,6 @@ export default function PortfolioPage() {
       <div className="relative z-10 min-h-screen p-8 md:p-12 flex flex-col">
         <div className="flex justify-between items-center mb-8">
           <span className="text-sm text-black">©2024</span>
-          <ContactForm />
         </div>
         <header className="mb-8">
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-black satoshi-black break-words">ADAM AXTOPANI GONZALES</h1>
