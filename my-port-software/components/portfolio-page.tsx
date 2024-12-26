@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Globe, Palette, Database, ExternalLink } from 'lucide-react'
+import { Globe, Palette, Database } from 'lucide-react'
 import Image from 'next/image'
 
 
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
-                  className="italic uppercase text-black text-5xl md:text-3xl mb-8 font-black"
+                  className="italic uppercase text-black text-2xl md:text-3xl mb-8 font-black"
                 >
                   {category}
                 </motion.h3>
